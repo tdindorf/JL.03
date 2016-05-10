@@ -1,0 +1,124 @@
+﻿<html>
+	
+	<head>
+		<title>JL.03.p11.2</title>
+	</head>
+	
+	<body onload='start()'>
+		<div>
+			<div>
+				<div style="width:80%;float:left; border: solid 1px blue;">	
+					<center>
+						<p>
+							<input type="range" id="instant" min="0" max="15000" step='50'
+							value="0" step="1" style='width: 700px;'
+							oninput="setInstant(this.value);"/>
+							<br/>
+							<strong>
+								<output id="instantValue">&nbsp;</output>
+							</strong>
+						</p>
+						<p>
+							<svg id="main" height="75%" width='80%'
+							viewBox="0 0 500 300"
+							text-anchor="end" font-size="16" font-family="arial"
+							xmlns="http://www.w3.org/2000/svg" 
+							xmlns:xlink="http://www.w3.org/1999/xlink">
+								
+								
+								<image xlink:href="Grid_10x06cm_500x300px.png"  x="0" y="0" width="500" height="300"/>
+								
+								<desc>Whole Page is shifted down 150 (half of the height); all y values are '-' in real time</desc>
+								
+								<!--Whole_page start ...-->
+								<g 	id="whole page"
+								fill="none" 
+								stroke-width="1"
+								text-anchor="middle"
+								transform="translate (250, 150)"
+								align='center'>
+									
+									<g id="graph" transform="scale(1, 1)">
+										
+										<g id="curves">
+											
+											<path id="curve_3c" stroke="orange" stroke-width="1" opacity="0.5"/>
+											
+											<path id="curve_1c" stroke="green" stroke-width="4" opacity="0.5"/>
+											<path id="curve_1d" stroke="green" stroke-width="4" opacity="0.3"/>
+											
+											<path id="curve_2c" stroke="red" stroke-width="4" opacity="0.5"/>
+											<path id="curve_2d" stroke="red" stroke-width="4" opacity="0.3"/>
+											
+											<path id="curve_3d" stroke="blue" stroke-width="4" opacity="1"/>
+											
+											<g id='brick'>
+												<circle cx='0' cy='0' r='8' stroke="#000" stroke-width="1" opacity="1" fill='none'/>
+												<text x='10' y='-10' fill='#000'>X</text>
+											</g>
+										</g>
+										<g id="clock" transform="translate(199.5 99.5)" fill="black"  
+										text-anchor="end" onclick="pauseAnim ()">	
+											<path id="clock-edge" d="M 0 0 h 50 v 50 h -50 z" 
+											stroke-width="4" stroke="none" fill="yellow" opacity="0.5"/>
+											<text id="timeText" x="47" y="30">time</text> 
+										</g>
+									</g> <!--... end of graph-->>
+								</g> <!--... end Whole_page -->>
+								<script xlink:href='./JL.03.p11.js'></script>
+								<script type="application/ecmascript"> <![CDATA[	
+									f.adjustL2(-1);
+									f.adjustA2(1.6);
+								]]> </script>
+							</svg>
+						</p>
+					</center>
+				</div>
+			</div>
+			<div style="width:19%;float:left; border: solid 1px blue;">
+				<center>
+					<!--p>
+						<input type="button" value="pulse A"
+						onclick='f.pulseA();'/>
+					</p>
+					<label for="input_A1" style="color: #fff; background-color: #0a0">&nbsp; amplitude A:&nbsp; </label>
+					<input type="number" id="input_A1" min="-2" max="2" 
+					value='1' step='0.2' 
+					oninput="f.adjustA1(this.value);"/>
+					<input type="button" value="flip A"
+					onclick='f.flipA();'/-->
+					<p>
+						<button onclick='reset()'>Reset</button>
+						<button onclick='pauseAnim()'>Pause/Play</button>
+					</p>
+					<p>
+					<label for="SloMo">Rate: </label>
+					<input type="range" name="SloMo" min="0.1" max="2" step='0.01'
+					style='width: 100;'
+					oninput="f.adjustSloMo(this.value);"/>
+					</p>
+					<!--p>
+					<label for="input_A2"style="color: #fff; background-color: #f00">&nbsp; amplitude B:&nbsp; </label>
+					<input type="number" id="input_A2" min="-2" max="2" 
+					value='1' step='0.2' 
+					oninput="f.adjustA2(this.value);"/>
+					<input type="button" value="flip B"
+					onclick='f.flipB();'/>
+					<p>
+						
+						
+						<input type="button" value="pulse B"
+						onclick='f.pulseB();'/>
+					</p>
+					<p>
+						<label for="input_L2">L :</label>
+							<input type="range" id="input_L2" name='input_L2'
+							min="-1" max="1" step='1'
+							value='0'  
+						oninput="f.adjustL2(this.value);"/>
+					</p-->
+				</center>
+			</div>
+		</div>
+	</body>
+</html>
