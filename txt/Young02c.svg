@@ -1,0 +1,105 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink"
+width='95%' height='95%'
+viewBox="0 0 500 300"
+preserveAspectRatio="xMidYMid meet"
+text-anchor="middle"
+font-family='Tahoma'
+style='border:solid 1px grey;'>
+	
+	<style>
+		.sub {
+		baseline-shift: sub; 
+		font-size: small;
+		}
+	</style>
+	
+	<defs>
+		<clipPath id="clipPath">
+			<rect x="-50" y="-120" width="400" height="250" />
+		</clipPath>
+		<g id='source'>
+			<circle r='2' fill='yellow' stroke="green"/>
+		</g>
+	</defs>
+	
+	<g transform="translate(250 120)"> <!-- start of page -->
+		
+		<g id= "ray_diagram_3" transform="translate(0 0)">
+			
+			<g id="Secondary"  transform="translate(-180 0)">
+				
+				<g id="pathsDifArc" stroke="red" stroke-dasharray="5 5" fill='none'>
+					<circle cx="380" cy="-90" r="388" clip-path="url(#clipPath)"/>
+				</g>
+				
+				<g id="angleTheta" stroke="purple" stroke-dasharray="2 1" fill='none'>
+					<path d="M200 0 A 200 200 0 0 0 194 -46"/>
+				</g>
+				
+				<g id="MaxLines" >
+					<path d="M 0 0 l 380 0" style='stroke:brown;'/>
+					<path d="M 0 0 l 380 -90" stroke="lightgrey" stroke-dasharray="10 10"/>
+				</g>
+				
+				<g id="Paths" stroke="lightgreen">
+					<path  d="M 0 -150 v 220" style='stroke:orange; opacity:0.5;'/>
+					
+					<path d="M  0 -10 L 380 -90"/>
+					<path d="M  0 10 L 380 -90"/>
+					<g id="pointers" style='stroke:green; opacity:0.25;'>
+						<path d="M  -5 -15 l -20 -20"/>
+						<path d="M  -5  0 l -20 0"/>
+						<path d="M  -5 15 l -20 20"/>
+					</g>
+					<use x="0" y="10" xlink:href="#source"/>
+					<use x="0" y="-10" xlink:href="#source"/>
+				</g>
+				
+				<g id="sourceLabels" style='stroke: none; fill:black' transform="translate(-35 5)">
+					<text x="0" y="-40">S<tspan class='sub'>1</tspan> </text>
+					<text x="0" y="0">M</text>
+					<text x="0" y="40">S<tspan class='sub'>2</tspan> </text>
+					<text x="35" y="90">Q</text>
+				</g>
+				</g>
+				
+			<text x="30" y="-20">θ</text>
+			<text x="-20" y="15" style='stroke: none; fill:brown'>D</text>
+			
+			<g id="Points" text-anchor="start" transform="translate(205 3)">
+				
+				<path  d="M -3 -150 v 220" stroke-width = "1" stroke = "lightgrey"/>
+				
+				<text y="0">P<tspan class='sub'>0</tspan> </text>
+				<text y="-90">P<tspan class='sub'>1</tspan> </text>
+				<text x = "3" y="-45" style='fill:red'>s</text>
+				<path d='M -3 -3 v -90' style='stroke:red'/>
+				<text x = "-8" y="90">R</text>
+			</g>
+			
+			<g id="magView" transform="translate(110 -20)">
+				
+				<circle cx="0" cy="50" r="80" style='fill:#fff; stroke:green; opacity:0.9;'/>
+				<path d="M 0 0 v 100" stroke="grey"/>
+				<g id="sourceLabels" style='stroke: none; fill:black' transform="translate(-15 0)">
+					<text x="0" y="0">S<tspan class='sub'>1</tspan> </text>
+					<text x="0" y="56" style='fill: grey;'>d</text>
+					<text x="0" y="100">S<tspan class='sub'>2</tspan> </text>
+					<text x="45" y="108">K</text>
+					<text x="28" y="120" style='fill: blue;'>Δx</text>
+				</g>
+				
+				
+				<g id="rightAngle"  transform="rotate(-13 0 0)">
+					<path d="M 0 -20 v 140" stroke="red" stroke-dasharray="10 10"/>
+					<path d="M 0 98 h -23" style='stroke: blue; stroke-width:2px;'/>
+					<path d="M 0 0 h 50 M 0 98 h 50 " stroke="lightgreen"/>
+					<use x="0" y="0" xlink:href="#source"/>
+					<use x="-23" y="98" xlink:href="#source"/>
+				</g>
+			</g>
+			
+		</g> <!-- end of ray diagram-->
+	</g> <!-- end of page-->
+</svg>		
