@@ -1,4 +1,4 @@
-var W = 400,
+var W = 450,
 H = 200,
 r = 5;
 var svg, circles, page;
@@ -20,7 +20,7 @@ function init() {
 	resumeTime = 0;
 	timeRate = 1;
 	speed = 0.02;	//in px/ms lambda/period;
-	lambda = 4*50;
+	lambda = 6*50;
 	
 	amplitude = 0.4;
 	
